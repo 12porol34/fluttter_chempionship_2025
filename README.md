@@ -1,4 +1,4 @@
-dependencies:                                                 
+ dependencies:                                                 
   flutter:
     sdk: flutter
      cupertino_icons: ^1.0.8                                            
@@ -40,36 +40,36 @@ Folder stucture
 └── layers                  
 │   └── data                            
 │   │   ├── local                                    
-│   │   │   └── sqflite_source.dart          
+│   │   │   └── sqflite_source.dart                       
 │   │   └── network             
-│   │       └── api.dart             
+│   │       └── api.dart                     
 │   └── domain          
-│   │   ├── entity                                                           
+│   │   ├── entity                                                            
 │   │   │   ├── product.dart               
-│   │   │   ├── user.dart
-│   │   │   └── ...
-│   │   │
-│   │   ├── repository   (... only CRUD)
-│   │   │   ├── product_repository.dart
-│   │   │   ├── user_repository.dart
-│   │   │   └── ...           
-│   │   │
-│   │   └── usecases
-│   │       ├── product_usecase.dart
-│   │       ├── user_usecase.dart
-│   │       └── ...
+│   │   │   ├── user.dart                                                                      
+│   │   │   └── ...                                                                             
+│   │   │                                                                         
+│   │   ├── repository   (... only CRUD)                                 
+│   │   │   ├── product_repository.dart                             
+│   │   │   ├── user_repository.dart                                      
+│   │   │   └── ...                                                     
+│   │   │                                         
+│   │   └── usecases                                           
+│   │       ├── product_usecase.dart                                     
+│   │       ├── user_usecase.dart                                     
+│   │       └── ...                                  
 │   │   
-│   └── presentation
-│       ├── screens
-│       │   ├── home_screen.dart
-│       │   ├── profile_screen.dart
-│       │   └── ...
-│       │
-│       └── shared
-│           ├── store
-│           ├── ui
-│           └── ...
-│
-└── main.dart
+│   └── presentation                                       
+│       ├── screens                                    
+│       │   ├── home_screen.dart                                 
+│       │   ├── profile_screen.dart                                        
+│       │   └── ...                                                     
+│       │                                                          
+│       └── shared                                           
+│           ├── store                                                    
+│           ├── ui                                            
+│           └── ...                                                    
+│                                                                                                                                              
+└── main.dart                                                 
 ___________________________________________
 app design- https://www.figma.com/design/YFIQ0o0c2VozfcVD5PQAxN/Matule-with-Style-guide-ORIG--Main-?node-id=13-4657&p=f&t=TuBsdzlr6V0YtHxU-0
