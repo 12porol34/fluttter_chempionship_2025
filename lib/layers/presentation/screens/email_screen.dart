@@ -5,8 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
 
-class MailRegistration extends StatelessWidget {
-  const MailRegistration({super.key});
+class EmailScreen extends StatelessWidget {
+  const EmailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,10 @@ class MailRegistration extends StatelessWidget {
             Text(
               context.tr('cyemail'),
               textAlign: TextAlign.center,
-              style: GoogleFonts.roboto(fontSize: 25, fontWeight: FontWeight.bold),
+              style: GoogleFonts.roboto(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             Text(
               context.tr('check_mail'),
@@ -44,10 +47,10 @@ class MailRegistration extends StatelessWidget {
             CupertinoButton(
               borderRadius: BorderRadius.circular(100),
               color: Color.fromRGBO(72, 178, 231, 1),
-              onPressed: () => context.go('/'),
+              onPressed: () => context.go('/shope'),
               child: Text(
                 context.tr('сontinue'),
-                style: TextStyle(color: BrandColors.TextLight,),
+                style: TextStyle(color: BrandColors.TextLight),
               ),
             ),
           ],

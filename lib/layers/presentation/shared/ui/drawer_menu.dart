@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:go_router/go_router.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
-// import 'package:matule/core/settings/color_settings.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
 
 class DrawerMenu extends StatelessWidget {
@@ -11,35 +11,69 @@ class DrawerMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // ZoomDrawer.of(context)?.open();
     return Container(
       width: double.maxFinite,
       padding: const EdgeInsets.only(top: 84.0, left: 20.0),
-      color: BrandColors.accent,
+      color: Color.fromRGBO(72, 178, 231, 1),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-
-          // nav button link
-          const SizedBox(height: 58.0),
+          Center(
+            child: Stack(
+              alignment: Alignment.bottomRight,
+              children: [
+                ClipOval(
+                  child: Image.asset(
+                    'assets/men.png',
+                    width: 100,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 10),
+          Center(
+            child: Column(
+              children: [
+                Text(
+                  'Дмитрий Накиев',
+                  style: GoogleFonts.roboto(
+                    fontSize: 20,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                    fontWeight: FontWeight.w700,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+              ],
+            ),
+          ),
 
           SizedBox(
             height: 24.0,
             width: 170.0,
             child: CupertinoButton(
               padding: const EdgeInsets.all(0.0),
-              color: Colors.transparent,
-                child: const Row(
-                  children: [
-                    Icon(CupertinoIcons.person),
-                    SizedBox(width: 27.0),
-                    Text('Профиль')
-                  ],
-                ),
-                onPressed: () {
-                  ZoomDrawer.of(context)?.close();
-                  context.go('/profile');
-                }),
+              color: const Color.fromARGB(0, 255, 255, 255),
+              child: const Row(
+                children: [
+                  Icon(
+                    CupertinoIcons.person,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  SizedBox(width: 27.0),
+                  Text(
+                    ('Профиль'),
+                    style: TextStyle(color: Color.fromRGBO(255, 255, 255, 1)),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                ZoomDrawer.of(context)?.close();
+                context.go('/profile');
+              },
+            ),
           ),
           const SizedBox(height: 30),
 
@@ -48,18 +82,25 @@ class DrawerMenu extends StatelessWidget {
             width: 170.0,
             child: CupertinoButton(
               padding: const EdgeInsets.all(0.0),
-              color: Colors.transparent,
-                child: const Row(
-                  children: [
-                    Icon(CupertinoIcons.bag),
-                    SizedBox(width: 27.0),
-                    Text('Корзина')
-                  ],
-                ),
-                onPressed: () {
-                  ZoomDrawer.of(context)?.close();
-                  context.go('/profile');
-                }),
+              color: const Color.fromARGB(0, 255, 255, 255),
+              child: const Row(
+                children: [
+                  Icon(
+                    CupertinoIcons.heart,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  SizedBox(width: 27.0),
+                  Text(
+                    ('Корзина'),
+                    style: TextStyle(color: Color.fromRGBO(255, 255, 255, 1)),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                ZoomDrawer.of(context)?.close();
+                context.go('/profile');
+              },
+            ),
           ),
           const SizedBox(height: 30),
 
@@ -68,18 +109,25 @@ class DrawerMenu extends StatelessWidget {
             width: 170.0,
             child: CupertinoButton(
               padding: const EdgeInsets.all(0.0),
-              color: Colors.transparent,
-                child: const Row(
-                  children: [
-                    Icon(CupertinoIcons.heart),
-                    SizedBox(width: 27.0),
-                    Text('Избранное')
-                  ],
-                ),
-                onPressed: () {
-                  ZoomDrawer.of(context)?.close();
-                  context.go('/favorite');
-                }),
+              color: const Color.fromARGB(0, 255, 255, 255),
+              child: const Row(
+                children: [
+                  Icon(
+                    CupertinoIcons.heart,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  SizedBox(width: 27.0),
+                  Text(
+                    ('Избраное'),
+                    style: TextStyle(color: Color.fromRGBO(255, 255, 255, 1)),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                ZoomDrawer.of(context)?.close();
+                context.go('/favorite');
+              },
+            ),
           ),
           const SizedBox(height: 30),
 
@@ -88,18 +136,25 @@ class DrawerMenu extends StatelessWidget {
             width: 170.0,
             child: CupertinoButton(
               padding: const EdgeInsets.all(0.0),
-              color: Colors.transparent,
-                child: const Row(
-                  children: [
-                    Icon(Icons.delivery_dining_outlined),
-                    SizedBox(width: 27.0),
-                    Text('Заказы')
-                  ],
-                ),
-                onPressed: () {
-                  ZoomDrawer.of(context)?.close();
-                  context.go('/favorite');
-                }),
+              color: const Color.fromARGB(0, 255, 255, 255),
+              child: const Row(
+                children: [
+                  Icon(
+                    Icons.delivery_dining_outlined,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  SizedBox(width: 27.0),
+                  Text(
+                    ('Заказы'),
+                    style: TextStyle(color: Color.fromRGBO(255, 255, 255, 1)),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                ZoomDrawer.of(context)?.close();
+                context.go('/favorite');
+              },
+            ),
           ),
           const SizedBox(height: 30),
 
@@ -108,18 +163,25 @@ class DrawerMenu extends StatelessWidget {
             width: 170.0,
             child: CupertinoButton(
               padding: const EdgeInsets.all(0.0),
-              color: Colors.transparent,
-                child: const Row(
-                  children: [
-                    Icon(Icons.notifications_outlined),
-                    SizedBox(width: 27.0),
-                    Text('Уведомления')
-                  ],
-                ),
-                onPressed: () {
-                  ZoomDrawer.of(context)?.close();
-                  context.go('/notification');
-                }),
+              color: const Color.fromARGB(0, 255, 255, 255),
+              child: const Row(
+                children: [
+                  Icon(
+                    CupertinoIcons.bell,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  SizedBox(width: 27.0),
+                  Text(
+                    ('Уведомления'),
+                    style: TextStyle(color: Color.fromRGBO(255, 255, 255, 1)),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                ZoomDrawer.of(context)?.close();
+                context.go('/notification');
+              },
+            ),
           ),
           const SizedBox(height: 30),
 
@@ -128,42 +190,54 @@ class DrawerMenu extends StatelessWidget {
             width: 170.0,
             child: CupertinoButton(
               padding: const EdgeInsets.all(0.0),
-              color: Colors.transparent,
-                child: const Row(
-                  children: [
-                    Icon(CupertinoIcons.gear),
-                    SizedBox(width: 27.0),
-                    Text('Настройки')
-                  ],
-                ),
-                onPressed: () {
-                }),
+              color: const Color.fromARGB(0, 255, 255, 255),
+              onPressed: () {},
+              child: const Row(
+                children: [
+                  Icon(
+                    CupertinoIcons.gear,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  SizedBox(width: 27.0),
+                  Text(
+                    ('Настройки'),
+                    style: TextStyle(color: Color.fromRGBO(255, 255, 255, 1)),
+                  ),
+                ],
+              ),
+            ),
           ),
-          
+
           const SizedBox(height: 38),
 
-          // logout
-          const Divider(color: Color.fromRGBO(247, 247, 249, 0.23)),        
+          const Divider(color: Color.fromRGBO(255, 255, 255, 0.231)),
           const SizedBox(height: 30),
-          
+
           SizedBox(
             height: 24.0,
             width: 170.0,
             child: CupertinoButton(
               padding: const EdgeInsets.all(0.0),
-              color: Colors.transparent,
-                child: const Row(
-                  children: [
-                    Icon(Icons.logout),
-                    SizedBox(width: 27.0),
-                    Text('Выйти')
-                  ],
-                ),
-                onPressed: () {
-                  Supabase.instance.client.auth.signOut();
-                  context.go('/onboarding');
-                }),
-          )
+              color: const Color.fromARGB(0, 255, 255, 255),
+              child: const Row(
+                children: [
+                  Icon(
+                    CupertinoIcons.back,
+                    color: Color.fromRGBO(255, 255, 255, 1),
+                  ),
+                  SizedBox(width: 27.0),
+                  Text(
+                    ('Выйти'),
+                    style: TextStyle(color: Color.fromRGBO(255, 255, 255, 1)),
+                  ),
+                ],
+              ),
+              onPressed: () {
+                Supabase.instance.client.auth.signOut();
+                context.go('/onboarding');
+              },
+            ),
+          ),
         ],
       ),
     );

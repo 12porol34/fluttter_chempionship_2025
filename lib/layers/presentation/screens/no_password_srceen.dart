@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
 
-class ForgotPasswordsrceen extends StatelessWidget {
-  const ForgotPasswordsrceen({super.key});
+class NoPasswordSrceen extends StatelessWidget {
+  const NoPasswordSrceen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,15 +33,16 @@ class ForgotPasswordsrceen extends StatelessWidget {
             Text(
               context.tr('forgot_password'),
               textAlign: TextAlign.center,
-              style: TextStyle(color: BrandColors.text, fontSize: 25, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                color: BrandColors.text,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             Text(
               context.tr('enter_your_email_to_recovery'),
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 15,
-                color: BrandColors.subTextDark,
-              ),
+              style: TextStyle(fontSize: 15, color: BrandColors.subTextDark),
             ),
             SizedBox(height: 20),
             Container(
@@ -67,7 +68,7 @@ class ForgotPasswordsrceen extends StatelessWidget {
             CupertinoButton(
               borderRadius: BorderRadius.circular(14),
               color: BrandColors.accent,
-              onPressed: () => context.go('/mailr'),
+              onPressed: () => context.go('/visol'),
               child: Text(
                 context.tr('send'),
                 style: TextStyle(color: BrandColors.TextLight),

@@ -1,9 +1,14 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:go_router/go_router.dart';
+import 'package:matule/core/helpers/brand_colors.dart';
+import 'package:matule/layers/presentation/shared/ui/Outdoor_button.dart';
 import 'package:matule/layers/presentation/shared/ui/card_screen.dart';
 import 'package:matule/layers/presentation/shared/ui/home_button.dart';
 import 'package:matule/layers/presentation/shared/ui/card_screen.dart';
+import 'package:matule/layers/presentation/shared/ui/tennis_button.dart';
 
 class PetuhScreen extends StatefulWidget {
   const PetuhScreen({super.key});
@@ -26,23 +31,22 @@ class _PetuhScreenState extends State<PetuhScreen> {
               children: <Widget>[
                 Container(
                   child: IconButton(
-                    onPressed: () => context.go('/'),
+                    onPressed: () {
+                      ZoomDrawer.of(context)?.toggle();
+                    },
+
                     icon: Icon(CupertinoIcons.line_horizontal_3_decrease),
                   ),
                 ),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
                 Container(
                   child: IconButton(
-                    onPressed: () => context.go('/'),
+                    onPressed: () => context.go('/basket'),
                     icon: Icon(CupertinoIcons.bag),
                   ),
                 ),
               ],
             ),
+
             Text(
               ('Главная'),
               style: TextStyle(
@@ -56,15 +60,9 @@ class _PetuhScreenState extends State<PetuhScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                // Container(
-                //   child: IconButton(
-                //     onPressed: () => context.go('/'),
-                //     icon: Icon(CupertinoIcons.airplane),
-                //   ),
-                // ),
                 Container(
                   width: 300,
-                  height: 52,
+
                   child: TextField(
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
@@ -72,7 +70,6 @@ class _PetuhScreenState extends State<PetuhScreen> {
                     ),
                   ),
                 ),
-                Container(),
               ],
             ),
             SizedBox(height: 20),
@@ -82,7 +79,15 @@ class _PetuhScreenState extends State<PetuhScreen> {
               decoration: BoxDecoration(),
               child: ListView(
                 scrollDirection: Axis.horizontal,
-                children: [HomeButton(), HomeButton(), HomeButton()],
+                children: [HomeButton(), OutdoorButton(), TennisButton()],
+              ),
+            ),
+            GestureDetector(
+              onTap: () => context.go('/cros'),
+              child: Text(
+                context.tr('Все'),
+                style: TextStyle(fontSize: 15, color: BrandColors.accent),
+                textAlign: TextAlign.right,
               ),
             ),
             SizedBox(height: 20),
@@ -94,6 +99,12 @@ class _PetuhScreenState extends State<PetuhScreen> {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 children: [CardScreen(), CardScreen()],
+              ),
+            ),
+
+            Expanded(
+              child: Column(
+                children: [Image.asset('assets/corsk.png', fit: BoxFit.cover)],
               ),
             ),
           ],

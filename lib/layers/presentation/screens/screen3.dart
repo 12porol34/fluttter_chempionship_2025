@@ -29,7 +29,7 @@ class Screen3 extends StatelessWidget {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () => context.go('/'),
+              onPressed: () => context.go('/visol'),
               child: Text('Начать'),
             ),
           ],

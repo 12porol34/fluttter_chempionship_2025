@@ -62,7 +62,7 @@ class CardScreen extends StatelessWidget {
           top: 150,
           left: 10,
           child: Text(
-            'Р752.00',
+            'Р1488.42',
             style: GoogleFonts.roboto(
               fontSize: 15,
               color: BrandColors.text,

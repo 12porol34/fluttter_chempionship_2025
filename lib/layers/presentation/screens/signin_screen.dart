@@ -26,7 +26,7 @@ class SigninScreen extends StatelessWidget {
                     color: Color.fromRGBO(245, 243, 243, 1),
                     borderRadius: BorderRadius.circular(100),
                   ),
-                  child: IconButton( //Кнопка смены языка
+                  child: IconButton(
                     onPressed: () {
                       if (context.locale.languageCode == 'en') {
                         context.setLocale(Locale('ru'));
@@ -41,12 +41,17 @@ class SigninScreen extends StatelessWidget {
             ),
             SizedBox(height: 15),
             Text(
-              context.tr('wellcome'),
+              context.tr('Привет!'),
               textAlign: TextAlign.center,
-              style: GoogleFonts.roboto(fontSize: 25, fontWeight: FontWeight.bold),
+              style: GoogleFonts.roboto(
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+              ),
             ),
             Text(
-              context.tr('fill_your_details'),
+              context.tr(
+                'Заполните Свои данные или продолжите через социальные медиа',
+              ),
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 15,
@@ -54,7 +59,7 @@ class SigninScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 60),
-            Text( // Текст над первым полем
+            Text(
               context.tr('email'),
               style: TextStyle(
                 fontWeight: FontWeight.w500,
@@ -64,7 +69,7 @@ class SigninScreen extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
             SizedBox(height: 12.0),
-            Container( // Первое поле
+            Container(
               height: 48.0,
               decoration: BoxDecoration(
                 color: Color.fromRGBO(247, 247, 249, 1),
@@ -73,8 +78,8 @@ class SigninScreen extends StatelessWidget {
               child: EmailField(),
             ),
             SizedBox(height: 20),
-            Text( // Текст над вторым полем
-              context.tr('password'),
+            Text(
+              context.tr('Пароль'),
               style: TextStyle(
                 fontWeight: FontWeight.w500,
                 fontSize: 18.0,
@@ -83,7 +88,7 @@ class SigninScreen extends StatelessWidget {
               textAlign: TextAlign.left,
             ),
             SizedBox(height: 12.0),
-            Container( // Второе поле
+            Container(
               height: 48.0,
               decoration: BoxDecoration(
                 color: BrandColors.background,
@@ -92,13 +97,10 @@ class SigninScreen extends StatelessWidget {
               child: PasswordField(),
             ),
             GestureDetector(
-              onTap: () => context.go('/pass'),
+              onTap: () => context.go('/da'),
               child: Text(
-                context.tr('forgot_password'),
-                style: TextStyle(
-                  fontSize: 15,
-                  color: BrandColors.subTextDark,
-                ),
+                context.tr('Востановить'),
+                style: TextStyle(fontSize: 15, color: BrandColors.subTextDark),
                 textAlign: TextAlign.right,
               ),
             ),
@@ -106,10 +108,10 @@ class SigninScreen extends StatelessWidget {
             CupertinoButton(
               borderRadius: BorderRadius.circular(100),
               color: BrandColors.accent,
-              onPressed: () => context.go('/home'),
+              onPressed: () => context.go('/shope'),
               child: Text(
                 context.tr('sign_in'),
-                style: TextStyle(color: BrandColors.TextLight,),
+                style: TextStyle(color: BrandColors.TextLight),
               ),
             ),
             Expanded(
@@ -120,15 +122,16 @@ class SigninScreen extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        context.tr('new_user'),
-                        style: TextStyle(
-                          color: BrandColors.text,
-                        ),
+                        context.tr('Вы впервые?'),
+                        style: TextStyle(color: BrandColors.text),
                       ),
                       SizedBox(width: 10),
                       GestureDetector(
-                        onTap: () => context.push('/create'),
-                        child: Text(context.tr('create_account'),style: TextStyle(color: BrandColors.subTextDark),),
+                        onTap: () => context.push('/aaa'),
+                        child: Text(
+                          context.tr('Создать пользователя'),
+                          style: TextStyle(color: BrandColors.subTextDark),
+                        ),
                       ),
                     ],
                   ),
