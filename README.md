@@ -1,15 +1,16 @@
-Это приложения написано на flutter,был написан для конкурсного задания что бы проверить мои знания.                                      
-assets:                                                               
-assets/localization/en.json,                                  
-assets/localization/ru.json,                                          
-assets/bottombar.png,
-assets/2c705924fd56edd26a4546a27a004864553e05d9.png,                    
-assets/corsk.png,                                          
-assets/cros1.png,                                   
-assets/cros2.png,                                       
-assets/cros3.png,                     
-__________________________________________________                                     
-Readme.md structure                                
+ assets:                                                     
+assets/localization/en.json                                               
+assets/localization/ru.json                                   
+ assets/bottombar.png                                  
+ assets/2c705924fd56edd26a4546a27a004864553e05d9.png                                 
+ assets/corsk.png                                
+ assets/cros1.png                            
+ assets/cros2.png                           
+ assets/cros3.png                                    
+ assets/men.png                                 
+ assets/strih.png                                           
+__________________________________________________                                                                                  
+Readme.md structure                                                                           
 
 Folder stucture                                                     
 
