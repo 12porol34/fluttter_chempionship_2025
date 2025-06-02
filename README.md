@@ -1,3 +1,6 @@
+![Image alt](https://github.com/12porol34/fluttter_chempionship_2025/blob/main/preview.png)
+ 
+ 
  assets:                                                     
 assets/localization/en.json                                               
 assets/localization/ru.json                                   
