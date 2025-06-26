@@ -5,9 +5,11 @@ import 'package:matule/layers/presentation/screens/basket_screen.dart';
 import 'package:matule/layers/presentation/screens/build_screen.dart';
 import 'package:matule/layers/presentation/screens/email_screen.dart';
 import 'package:matule/layers/presentation/screens/no_password_srceen.dart';
+
 import 'package:matule/layers/presentation/screens/notifications_screen.dart';
 import 'package:matule/layers/presentation/screens/petuh_screen.dart';
 import 'package:matule/layers/presentation/screens/popular_screen.dart';
+import 'package:matule/layers/presentation/screens/produkt_screen.dart';
 import 'package:matule/layers/presentation/screens/profile_screen.dart';
 import 'package:matule/layers/presentation/screens/registr_screen.dart';
 import 'package:matule/layers/presentation/screens/screen1.dart';
@@ -84,6 +86,7 @@ class RouterConfigGO {
       GoRoute(path: '/da', builder: (context, state) => NoPasswordSrceen()),
       GoRoute(path: '/aaa', builder: (context, state) => RegistrScreen()),
       GoRoute(path: '/mail', builder: (context, state) => EmailScreen()),
+      GoRoute(path: '/uh', builder: (context, state) => ProduktScreen()),
     ],
   );
 }

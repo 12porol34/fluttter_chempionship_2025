@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:matule/core/helpers/brand_colors.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -12,7 +13,7 @@ class CardScreen extends StatelessWidget {
       children: <Widget>[
         Container(
           width: 175,
-          height: 175,
+          height: 145,
           padding: EdgeInsets.only(top: 12, left: 8, bottom: 12, right: 6),
           decoration: BoxDecoration(
             color: BrandColors.block,
@@ -22,23 +23,20 @@ class CardScreen extends StatelessWidget {
         ),
 
         Positioned(
-          left: 10,
+          left: 30,
           top: 10,
           right: 10,
           child: Container(
-            height: 100,
+            height: 110,
             width: 100,
-            child: Image.asset(
-              'assets/2c705924fd56edd26a4546a27a004864553e05d9.png',
-              fit: BoxFit.contain,
-            ),
+            child: Image.asset('assets/cros.png', fit: BoxFit.contain),
           ),
         ),
         Positioned(
           top: 107,
           left: 10,
           child: Text(
-            'BEST SELLER',
+            'Best Seller',
             style: GoogleFonts.roboto(
               fontSize: 10,
               color: BrandColors.accent,
@@ -62,7 +60,7 @@ class CardScreen extends StatelessWidget {
           top: 150,
           left: 10,
           child: Text(
-            'Р1488.42',
+            '₽752.00',
             style: GoogleFonts.roboto(
               fontSize: 15,
               color: BrandColors.text,
@@ -87,12 +85,12 @@ class CardScreen extends StatelessWidget {
                 color: BrandColors.red,
                 size: 20,
               ),
-              onPressed: () {},
+              onPressed: () => context.go('/uh'),
             ),
           ),
         ),
         Positioned(
-          top: 140,
+          top: 145,
           left: 140,
           child: Container(
             height: 35,
@@ -106,9 +104,9 @@ class CardScreen extends StatelessWidget {
               icon: Icon(
                 CupertinoIcons.add,
                 color: BrandColors.block,
-                size: 20,
+                size: 10,
               ),
-              onPressed: () {},
+              onPressed: () => context.go('/da'),
             ),
           ),
         ),

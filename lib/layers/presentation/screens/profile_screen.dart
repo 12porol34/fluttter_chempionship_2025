@@ -64,7 +64,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           ),
           SizedBox(height: 10),
           Text(
-            'Дмитрий Накиев',
+            'Имя не указано',
             style: GoogleFonts.roboto(
               fontSize: 25,
               color: BrandColors.text,

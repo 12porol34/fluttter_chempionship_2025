@@ -38,7 +38,7 @@ class DrawerMenu extends StatelessWidget {
             child: Column(
               children: [
                 Text(
-                  'Дмитрий Накиев',
+                  'Имя не указано',
                   style: GoogleFonts.roboto(
                     fontSize: 20,
                     color: Color.fromRGBO(255, 255, 255, 1),
